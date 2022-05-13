@@ -48,3 +48,9 @@ contract BuyMeACoffee {
 
     receive() external payable{}
 }
+
+//First deploy: 0x79be3Ed7d8C6DF033894165FbE78004AA71D78eD
+
+//Challenge TODO:
+    //1- Function to permit different addresses to withdraw
+    //2- Buttons for different coffee sizes
