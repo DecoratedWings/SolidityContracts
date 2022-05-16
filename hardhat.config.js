@@ -1,9 +1,12 @@
 require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-ethers");
+require("@nomiclabs/hardhat-etherscan");
 require("dotenv").config();
 
 const GOERLI_URL = process.env.GOERLI_URL;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const TESTNET_RPC = process.env.TESTNET_RPC;
+const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY;
 
 
 /**
@@ -15,6 +18,13 @@ module.exports = {
     goerli: {
       url: GOERLI_URL,
       accounts: [PRIVATE_KEY]
+    },
+    mumbai : {
+      url: TESTNET_RPC,
+      accounts: [PRIVATE_KEY]
     }
+  },
+  etherscan: {
+    apiKey: POLYGONSCAN_API_KEY
   }
 };
