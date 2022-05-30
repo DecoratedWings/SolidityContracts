@@ -9,6 +9,15 @@ const TESTNET_RPC = process.env.TESTNET_RPC;
 const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY;
 
 
+task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
+  const accounts = await hre.ethers.getSigners();
+
+  for (const account of accounts) {
+    console.log(account.address);
+  }
+});
+
+
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
